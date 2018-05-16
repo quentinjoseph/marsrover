@@ -1,0 +1,46 @@
+.bg-container {
+  width: 40%;
+  margin:auto;
+  background-image: url('marsbg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  margin: auto;
+}
+
+.square {
+  width: 25%;
+  padding-bottom: 25%;
+  box-sizing: border-box;
+  border: solid 1px black;
+}
+.button-holder {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.here {
+  background-image: url('Mars_2020_Rover_-_Artist\'s_Concept.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.start-block {
+  margin-top: 10px;
+}
+@media(max-width:1100px){
+  .bg-container {
+    width: 50%;
+  }
+}
+@media(max-width:768px){
+  .bg-container {
+    width: 80%;
+  }
+}
