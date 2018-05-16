@@ -1,9 +1,6 @@
-console.log('hello');
-console.log($('#xvalue').val(), $('#yvalue').val());
 
-
+// Forward Function
 var forward = function () {
-  
   var id = Number($('.here').attr('id')) + 1;
   if (id === 17) {
     id = 1;
@@ -13,41 +10,40 @@ var forward = function () {
   
 }
 // right function
-var right = function () {
-  var id = Number($('.here').attr('id')) + 4;
-  if (id === 17) {
-    id = 1;
-  } else if (id === 18) {
-    id = 2;
-  } else if (id === 19) {
-    id = 3;
-  } else if (id === 20) {
-    id = 4;
+  var right = function () {
+    var id = Number($('.here').attr('id')) + 4;
+    if (id === 17) {
+      id = 1;
+    } else if (id === 18) {
+      id = 2;
+    } else if (id === 19) {
+      id = 3;
+    } else if (id === 20) {
+      id = 4;
+    }
+    $('.here').removeClass('here');
+    $('#' + id).addClass('here');
+    console.log('right');
   }
-  $('.here').removeClass('here');
-  $('#' + id).addClass('here');
-  console.log('right');
-}
 
 
 
 $('button').on('click', function(){
   if($(this).hasClass('forward')){
     forward();
-
-  } else if ($(this).hasClass('backward')){
+  } 
+  else if ($(this).hasClass('backward')){
     var id = Number($('.here').attr('id')) - 1;
     if (id === 0) {
       id = 16;
     }
     $('.here').removeClass('here');
     $('#' + id).addClass('here');
-    
-
-  } else if ($(this).hasClass('right')){
+  } 
+  else if ($(this).hasClass('right')){
     right();
-
-  } else if ($(this).hasClass('left')){
+  } 
+  else if ($(this).hasClass('left')){
     var id = Number($('.here').attr('id')) - 4;
     if (id === -3) {
       id = 13;
@@ -60,9 +56,8 @@ $('button').on('click', function(){
     }
     $('.here').removeClass('here');
     $('#' + id).addClass('here');
-    
-
-  } else if ($(this).hasClass('submit')){
+  } 
+  else if ($(this).hasClass('submit')){
     $('#1').addClass('here');
     var xValue = $('#xvalue').val();
     var yValue = $('#yvalue').val();
