@@ -25,6 +25,23 @@
   margin: auto;
   text-align: center;
 }
+button {
+  color: white;
+  background-color: #a55f2a;
+  border: none;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 5px;
+  outline: none;
+}
+button:active {
+  background-color: orange;
+}
+input {
+  border-radius: 10px;
+  border: 1px solid silver;
+  padding:4px;
+}
 
 .here {
   background-image: url('Mars_2020_Rover_-_Artist\'s_Concept.png');
