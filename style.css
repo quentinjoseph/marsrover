@@ -34,6 +34,9 @@ button {
   border-radius: 5px;
   outline: none;
 }
+button:hover {
+  background-color: #412712;
+}
 button:active {
   background-color: orange;
 }
@@ -41,6 +44,7 @@ input {
   border-radius: 10px;
   border: 1px solid silver;
   padding:4px;
+  outline:none;
 }
 
 .here {
