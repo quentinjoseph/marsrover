@@ -23,7 +23,6 @@ var forward = function () {
     }
     $('.here').removeClass('here');
     $('#' + id).addClass('here');
-    console.log('right');
   }
 
 
@@ -58,14 +57,19 @@ $('button').on('click', function(){
     $('#' + id).addClass('here');
   } 
   else if ($(this).hasClass('submit')){
-    $('#1').addClass('here');
     var xValue = $('#xvalue').val();
     var yValue = $('#yvalue').val();
-    for (i=1; i< xValue; i++){
-      forward();
+    if ((xValue > 4) || (yValue > 4)){
+      alert('x and y values can only be 1-4');
     }
-    for (q=1; q < yValue; q++){
-      right();
+    else{
+      $('#1').addClass('here');
+      for (i = 1; i < xValue; i++) {
+        forward();
+      }
+      for (q = 1; q < yValue; q++) {
+        right();
+      }
     }
   }
   
